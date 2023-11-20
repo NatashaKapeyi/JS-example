@@ -71,9 +71,9 @@ type*/
 //console.log(7+2*5);
 
 // First(**),(*),(+)
-let salary= 7000
-let bonus= 2000
-let perfomance = false
+//let salary= 7000
+//let bonus= 2000
+//let perfomance = false
 //if(salary> 5000){
    // console.log(salary+bonus);  
 //}else {
@@ -132,13 +132,105 @@ switch (firstName) {
 /*let numbers=[9,8,3]
 console.log(numbers);
 console.log(typeof numbers);*/
- let cnt =1
+ /*let cnt =1
 function repeat (limit) {
    
     if (cnt<=limit) {
         console.log(cnt);
-        cnt    ++
+        cnt++
         repeat(limit)
     }
 }
-repeat(10)
+repeat(10)*/
+
+ //Dynamic nature of an object
+//  let person ={
+//     firstName: 'John',
+//     lastName:'Bruce'
+
+//  }
+ //console.log(person)
+// person.firstName='Peter'//access property of an object to change the firstName
+// console.log(person);
+// person.age= 20
+// console.log(person);
+
+//constructor property 
+// function NewRecord(name){
+//     this.name =name 
+// }
+//     let person1 = new NewRecord('John');
+//     let person2 = {name : 'Henk'};
+
+//Constructor property 
+// console.log(person1.constructor ===NewRecord);//True
+ //It the same as using instanceOf
+// console.log(person1 instanceof NewRecord);//True
+//console.log(person2.constructor ===NewRecord);
+
+//Functions are objects 
+// let person ={
+//     firstName: 'John',
+//     lastName: 'Bruce',
+//     fullName: function(){
+//         return `${this.firstName} ${this.lastName}`
+//     }
+// }
+// console.log(person);
+// console.log(person.fullName());
+
+let person ={
+    firstName:'John',
+    lastName: 'Bruce',
+    hrs:120,
+    rate:500,
+    salary:function(){
+        return this.hrs * this.rate
+    }
+}
+//console.log(person.salary());
+// person.salary() // using return key allows us to keep it and  display it later
+
+//looping through an object
+// let laptop ={
+//     make: 'Dell',
+//     cpu: '3Ghz',
+//     ram: '16GB'
+// }
+// for( const key in laptop); //displaying key values , for in allows us to get index
+//console.log(key, '',laptop[key]);
+ //console.log(laptop[key]);
+// console.log(Object.keys(laptop));
+// console.log(Object.values(laptop));
+// Object.keys(laptop).forEach( (key)=>{console.log(`${key} -> ${laptop[key]}`);
+// })
+// Object.values(laptop).forEach( (value)=>{
+//     console.log(`${value}`);
+// })
+ 
+// let car1 = {
+//     make: 'Toyota',
+//     year: 2023
+// }
+// let car2 = car1
+// console.log("==car1==");
+// console.log(car1);
+// console.log("==car2==");
+// console.log(car2);
+// console.log("Change the value of car2");
+// car2.year = 2024
+// console.log(car1, car2);
+//spread operator, object.assign(), JSON.parse()
+// spread-copy without copying the reference of car 1   
+// let car2 ={...car1}
+// console.log(car1, car2);
+// console.log("Change the value of car2");
+// car2.year = 2024
+// console.log(car1, car2);
+ // object.assign()
+// let car3=Object.assign({}, car1)
+// console.log("===car3===");
+// console.log(car3);
+// let car4=JSON.parse(JSON.stringify(car1))
+// console.log("===car4===");
+// console.log(car4);
